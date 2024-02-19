@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Carousel</title>
+    <style>
+        body {
+            background-color: #000;
+            
+        }
+        .slideshow {
+            position: center;
+            margin: 0 auto;
+            padding-top: 50px;
+            height: 300px;
+            background-color: #0a0a0a;
+        }
+
+        .content {
+            margin: auto;
+            width: 180px;
+            position: relative;
+            padding-top: 80px;
+            perspective: 1000px;
+        }
+
+        .content-carousel {
+            padding-left: 40px;
+            position: absolute;
+            width: 100%;
+            float: right;
+            animation: rotar 15s infinite linear;
+            transform-style: preserve-3d;
+        }
+
+        .content-carousel:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+
+        .content-carousel div {
+            width: 100%;
+            border: 2px #cacaca;
+            height: 150px;
+            overflow: hidden;
+            position: absolute;
+            border-radius: 10px;
+        }
+
+        .content-carousel div:nth-child(1) {
+            transform: rotateY(0deg) translateZ(300px);
+        }
+
+        .content-carousel div:nth-child(2) {
+            transform: rotateY(60deg) translateZ(300px);
+        }
+
+        .content-carousel div:nth-child(3) {
+            transform: rotateY(120deg) translateZ(300px);
+        }
+
+        .content-carousel div:nth-child(4) {
+            transform: rotateY(180deg) translateZ(300px);
+        }
+
+        .content-carousel div:nth-child(5) {
+            transform: rotateY(240deg) translateZ(300px);
+        }
+
+        .content-carousel div:nth-child(6) {
+            transform: rotateY(300deg) translateZ(300px);
+        }
+
+        .content-carousel div:nth-child(7) {
+            transform: rotateY(360deg) translateZ(300px);
+        }
+
+        .content-carousel img {
+            height: 100%;
+            width: 100%;
+            transition: all 300ms;
+            image-rendering: auto;
+        }
+
+        .content-carousel img:hover {
+            transform: scale(2);
+            transition: all 300ms;
+        }
+
+
+        @keyframes rotar {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Custom Carousel</h1>
+    <div class="main">
+        <div class="slideshow">
+            <div class="content">
+                <div class="content-carousel">
+                    <div class="shadow image">
+                        <img src="https://img.freepik.com/free-photo/full-shot-plus-sized-woman-stretching_23-2150172315.jpg?t=st=1708357132~exp=1708357732~hmac=8e4f3b2aa16f8572e2ddc43ed75099f7de4769da4f2cb5bcb092dac27c872459&w=826"
+                            alt="image1" />
+                    </div>
+
+                    <div class="shadow image">
+                        <img src="https://img.freepik.com/free-photo/medium-shot-woman-wearing-headphones_23-2149818230.jpg?t=st=1708357132~exp=1708357732~hmac=b7fc14824eab5e23cf2da0fd2826da2599b5ef711bbd74d88f0e0bbcf3218df5"
+                            alt="image2" />
+                    </div>
+
+
+                    <div class="shadow image">
+                        <img src="https://img.freepik.com/premium-photo/woman-standing-by-potted-plants_1048944-16402036.jpg?t=st=1708357132~exp=1708357732~hmac=8989e9e53fc51cac795760852c5361553af8bcd24d53a5dfbaeae0ff676057a8"
+                            alt="image3" />
+                    </div>
+
+
+                    <div class="shadow image">
+                        <img src="https://img.freepik.com/premium-photo/girl-riding-her-yellow-bike-dirt-road-summer_1048944-16415372.jpg?t=st=1708357132~exp=1708357732~hmac=744fa9e032f20ffd92ec58352a2e9387bd0d6a2a8106171454986d867a7cecdd"
+                            alt="image4" />
+                    </div>
+
+                    <div class="shadow image">
+                        <img src="https://img.freepik.com/premium-photo/close-up-dentist-using-instruments_23-2151053295.jpg?t=st=1708357132~exp=1708357732~hmac=113c04e27f821ee756bb543e43afb216c49508b2ed2bca4ff71e0a470f948f63.webp"
+                            alt="image4" />
+                    </div>
+
+                    <div class="shadow image">
+                        <img src="./images/image.png" alt="image4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
